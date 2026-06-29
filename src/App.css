@@ -197,7 +197,7 @@ a {
 .brand-mark {
   position: relative;
   z-index: 3;
-  width: 458px;
+  width: max-content;
   margin: 180px auto 0;
   transform: translateX(24px);
   font-family: var(--slab);
@@ -210,6 +210,7 @@ a {
 .brand-mark span {
   display: block;
   color: #f8c335;
+  white-space: nowrap;
   text-shadow:
     4px 0 #b83a00,
     -4px 0 #b83a00,
@@ -303,8 +304,10 @@ a {
 .decor-cactus-hero {
   z-index: 4;
   top: 324px;
-  left: -52px;
+  left: -51px;
   width: 441px;
+  transform: rotate(-3deg);
+  transform-origin: center bottom;
 }
 
 .decor-barrel-hero {
@@ -739,7 +742,7 @@ a {
   }
 
   .decor-cactus-hero {
-    left: calc(50% - 860px);
+    left: calc(50% - 859px);
     width: 470px;
   }
 
@@ -961,7 +964,7 @@ a {
 
   .decor-cactus-hero {
     z-index: 2;
-    left: -160px;
+    left: -159px;
     width: 340px;
   }
 
@@ -1149,7 +1152,7 @@ a {
 
   .decor-cactus-hero {
     top: 365px;
-    left: -190px;
+    left: -189px;
     width: 300px;
   }
 
