@@ -223,10 +223,10 @@ function App() {
 
         <img className="decor belt belt-left" src={asset('context-gemini-generated-image-strip.png')} alt="" />
         <img className="decor belt belt-right" src={asset('context-gemini-generated-image-strip.png')} alt="" />
-        <img className="decor leaf-left" src={asset('context-pngegg-95-3-4.png')} alt="" />
       </section>
 
       <section id="ubicacion" className="location-section">
+        <img className="decor leaf-left" src={asset('context-pngegg-95-3-4.png')} alt="" />
         <h2>¡En BARCELONA!</h2>
         <div className="map-frame">
           <img src={asset('context-rectangle-13-map.png')} alt="Mapa de la ubicación en Barcelona" />

@@ -207,7 +207,7 @@ a {
   position: relative;
   z-index: 3;
   width: max-content;
-  margin: 200px auto 0;
+  margin: 203px auto 0;
   transform: translateX(24px);
   font-family: var(--slab);
   line-height: 0.86;
@@ -313,7 +313,7 @@ a {
 .decor-cactus-hero {
   z-index: 4;
   top: 324px;
-  left: -51px;
+  left: -35px;
   width: 441px;
   transform: rotate(-3deg);
   transform-origin: center bottom;
@@ -646,9 +646,11 @@ a {
 }
 
 .leaf-left {
-  top: 1112px;
-  left: -170px;
-  width: 250px;
+  top: -242px;
+  left: -120px;
+  width: 340px;
+  transform: rotate(-90deg);
+  transform-origin: center center;
 }
 
 .location-section {
@@ -688,13 +690,14 @@ a {
   top: 315px;
   left: 50%;
   width: 320px;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(180deg);
 }
 
 .final-section {
   position: relative;
   min-height: 920px;
   padding-top: 40px;
+  overflow: hidden;
   text-align: center;
 }
 
@@ -735,17 +738,17 @@ a {
 .final-beer {
   position: absolute;
   z-index: 2;
-  top: 320px;
-  right: -36px;
-  width: 980px;
+  top: 300px;
+  right: -170px;
+  width: 1450px;
   max-width: none;
 }
 
 .final-cactus {
-  z-index: 3;
-  top: 380px;
-  left: 18px;
-  width: 320px;
+  z-index: 1;
+  top: 360px;
+  left: -42px;
+  width: 390px;
 }
 
 .final-leaf {
@@ -770,7 +773,7 @@ a {
   }
 
   .decor-cactus-hero {
-    left: calc(50% - 859px);
+    left: calc(50% - 843px);
     width: 470px;
   }
 
@@ -816,13 +819,13 @@ a {
 
   .artist-set-pol {
     top: 285px;
-    left: calc(50% - 1045px);
+    left: -85px;
     width: 610px;
   }
 
   .artist-set-david {
     top: 214px;
-    right: calc(50% - 1045px);
+    right: -85px;
     width: 520px;
   }
 
@@ -853,7 +856,7 @@ a {
   }
 
   .leaf-left {
-    left: calc(50% - 910px);
+    left: -120px;
   }
 
   .map-frame {
@@ -861,15 +864,15 @@ a {
   }
 
   .final-beer {
-    top: 320px;
-    right: calc(50% - 700px);
-    width: 1120px;
+    top: 290px;
+    right: calc(50% - 900px);
+    width: 1700px;
   }
 
   .final-cactus {
-    top: 380px;
-    left: calc(50% - 700px);
-    width: 330px;
+    top: 350px;
+    left: calc(50% - 850px);
+    width: 450px;
   }
 
   .final-leaf {
