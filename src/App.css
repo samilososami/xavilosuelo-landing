@@ -122,7 +122,7 @@ a {
   height: 48px;
   align-items: center;
   justify-content: center;
-  gap: 9px;
+  gap: 8px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 13px;
   background: rgba(255, 250, 249, 0.88);
@@ -136,10 +136,6 @@ a {
 .language-select img:first-child {
   width: 23px;
   height: 23px;
-}
-
-.language-select img:last-child {
-  width: 9px;
 }
 
 .arrow-icon {
@@ -202,7 +198,8 @@ a {
   position: relative;
   z-index: 3;
   width: 458px;
-  margin: 195px auto 0;
+  margin: 180px auto 0;
+  transform: translateX(24px);
   font-family: var(--slab);
   line-height: 0.86;
   letter-spacing: 3.2px;
@@ -924,7 +921,8 @@ a {
 
   .brand-mark {
     width: 390px;
-    margin-top: 195px;
+    margin-top: 184px;
+    transform: translateX(16px);
   }
 
   .brand-mark span:first-child {
@@ -1093,8 +1091,9 @@ a {
 
   .brand-mark {
     width: 340px;
-    margin-top: 195px;
+    margin-top: 190px;
     letter-spacing: 1.4px;
+    transform: translateX(0);
   }
 
   .brand-mark span {

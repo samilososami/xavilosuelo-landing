@@ -94,7 +94,6 @@ function App() {
         <div className="language-select" aria-label="Idioma">
           <img src={asset('context-earth-planet.png')} alt="" aria-hidden="true" />
           <span>ES</span>
-          <img src={asset('context-vector-1.svg')} alt="" aria-hidden="true" />
         </div>
       </header>
 
