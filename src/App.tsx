@@ -108,27 +108,28 @@ function App() {
   return (
     <MotionConfig reducedMotion="user">
       <main className="page-shell">
-      <motion.nav
-        className="site-nav"
-        aria-label="Principal"
+      <motion.header
+        className="site-header"
         initial={{ opacity: 1, y: -8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.38, ease: 'easeOut' }}
       >
-        <a href="#inicio">Inicio</a>
-        <a href="#evento">Sobre el evento</a>
-        <a href="#estrellas">Estrellas</a>
-        <a href="#ubicacion">Ubicación</a>
-        <motion.a className="nav-cta" href="#apuntarme" whileHover={{ y: -1, scale: 1.03 }}>
-          <span>Apuntarme</span>
-          <ArrowIcon />
-        </motion.a>
+        <nav className="site-nav" aria-label="Principal">
+          <a href="#inicio">Inicio</a>
+          <a href="#evento">Sobre el evento</a>
+          <a href="#estrellas">Estrellas</a>
+          <a href="#ubicacion">Ubicación</a>
+          <motion.a className="nav-cta" href="#apuntarme" whileHover={{ y: -1, scale: 1.03 }}>
+            <span>Apuntarme</span>
+            <ArrowIcon />
+          </motion.a>
+        </nav>
         <div className="language-select" aria-label="Idioma">
           <img src={asset('context-earth-planet.png')} alt="" aria-hidden="true" />
           <span>ES</span>
           <img src={asset('context-vector-1.svg')} alt="" aria-hidden="true" />
         </div>
-      </motion.nav>
+      </motion.header>
 
       <section id="inicio" className="hero-section">
         <motion.img
@@ -206,9 +207,6 @@ function App() {
           src={asset('context-pngegg-79-1.png')}
           alt=""
           style={{ y: barrelY }}
-          initial={{ opacity: 0, x: 38 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.85, delay: 0.38 }}
         />
       </section>
 
@@ -290,8 +288,8 @@ function App() {
           className="artist artist-pol"
           src={asset('context-screenshot-2-upscayl.png')}
           alt="Pol F Ryan"
-          initial={{ opacity: 0, x: -70 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -70, scaleX: -1 }}
+          whileInView={{ opacity: 1, x: 0, scaleX: -1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         />
