@@ -739,7 +739,8 @@ a {
   }
 
   .decor-cactus-hero {
-    left: -36px;
+    left: calc(50% - 860px);
+    width: 470px;
   }
 
   .decor-barrel-hero {
@@ -801,11 +802,13 @@ a {
   }
 
   .belt-left {
-    left: calc(50% - 760px);
+    left: 0;
+    width: 520px;
   }
 
   .belt-right {
-    right: calc(50% - 760px);
+    right: 0;
+    width: 520px;
   }
 
   .leaf-left {
