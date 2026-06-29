@@ -23,10 +23,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   min-width: 320px;
   margin: 0;
@@ -206,7 +202,7 @@ a {
   position: relative;
   z-index: 3;
   width: 458px;
-  margin: 211px auto 0;
+  margin: 195px auto 0;
   font-family: var(--slab);
   line-height: 0.86;
   letter-spacing: 3.2px;
@@ -315,8 +311,8 @@ a {
 }
 
 .decor-barrel-hero {
-  z-index: 5;
-  top: 599px;
+  z-index: 3;
+  top: 558px;
   right: 44px;
   width: 267px;
 }
@@ -528,6 +524,7 @@ a {
   top: 248px;
   left: -18px;
   width: 505px;
+  transform: scaleX(-1);
 }
 
 .artist-david {
@@ -927,7 +924,7 @@ a {
 
   .brand-mark {
     width: 390px;
-    margin-top: 210px;
+    margin-top: 195px;
   }
 
   .brand-mark span:first-child {
@@ -969,7 +966,8 @@ a {
 
   .decor-barrel-hero {
     z-index: 2;
-    right: -80px;
+    top: 574px;
+    right: -72px;
     width: 210px;
   }
 
@@ -1094,8 +1092,9 @@ a {
   }
 
   .brand-mark {
-    width: 320px;
-    margin-top: 210px;
+    width: 340px;
+    margin-top: 195px;
+    letter-spacing: 1.4px;
   }
 
   .brand-mark span {
@@ -1108,24 +1107,25 @@ a {
   }
 
   .brand-mark span:first-child {
-    font-size: 54px;
+    font-size: 49px;
   }
 
   .brand-mark span:last-child {
-    font-size: 48px;
+    font-size: 43px;
   }
 
   .curved-slogan {
-    width: 310px;
+    width: 300px;
     margin-top: 65px;
+    transform: translateX(-8px) rotate(-4deg);
   }
 
   .curved-slogan span {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   .curved-slogan strong {
-    font-size: 23px;
+    font-size: 22px;
   }
 
   .hero-section h1,
@@ -1152,8 +1152,8 @@ a {
   }
 
   .decor-barrel-hero {
-    top: 610px;
-    right: -118px;
+    top: 590px;
+    right: -105px;
   }
 
   .photo-mosaic {
