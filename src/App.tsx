@@ -82,10 +82,12 @@ function App() {
     <main className="page-shell">
       <header className="site-header">
         <nav className="site-nav" aria-label="Principal">
-          <a href="#inicio">Inicio</a>
-          <a href="#evento">Sobre el evento</a>
-          <a href="#estrellas">Estrellas</a>
-          <a href="#ubicacion">Ubicación</a>
+          <div className="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#evento">Sobre el evento</a>
+            <a href="#estrellas">Estrellas</a>
+            <a href="#ubicacion">Ubicación</a>
+          </div>
           <a className="nav-cta" href="#apuntarme">
             <span>Apuntarme</span>
             <ArrowIcon />
@@ -174,16 +176,20 @@ function App() {
       </section>
 
       <section id="estrellas" className="stars-section">
-        <img
-          className="artist artist-pol"
-          src={asset('context-screenshot-2-upscayl.png')}
-          alt="Pol F Ryan"
-        />
-        <img
-          className="artist artist-david"
-          src={asset('context-el-gat-amb-botes-country-shop.png')}
-          alt="David Villellas"
-        />
+        <div className="artist-set artist-set-pol">
+          <img
+            className="artist artist-pol"
+            src={asset('context-screenshot-2-upscayl.png')}
+            alt="Pol F Ryan"
+          />
+        </div>
+        <div className="artist-set artist-set-david">
+          <img
+            className="artist artist-david"
+            src={asset('context-el-gat-amb-botes-country-shop.png')}
+            alt="David Villellas"
+          />
+        </div>
         <div className="stars-copy">
           <p className="stars-eyebrow">¡Estrellas del evento!</p>
           <h2>

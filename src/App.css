@@ -72,12 +72,11 @@ a {
 }
 
 .site-nav {
-  display: flex;
+  display: grid;
   min-height: 42px;
   align-items: center;
-  justify-content: flex-end;
-  gap: 28px;
-  padding: 5px 8px 5px 420px;
+  grid-template-columns: minmax(112px, 1fr) auto minmax(112px, 1fr);
+  padding: 5px 8px;
   color: var(--brown);
   font-family: var(--serif);
   font-size: 16px;
@@ -86,6 +85,14 @@ a {
   border-radius: 13px;
   background: rgba(255, 250, 249, 0.88);
   backdrop-filter: blur(3.35px);
+}
+
+.nav-links {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
 }
 
 .site-nav a {
@@ -102,6 +109,8 @@ a {
 }
 
 .nav-cta {
+  grid-column: 3;
+  justify-self: end;
   display: inline-flex;
   min-width: 112px;
   height: 29px;
@@ -507,9 +516,31 @@ a {
 
 .stars-section {
   position: relative;
-  min-height: 2290px;
+  min-height: 1160px;
   margin-top: 143px;
+  overflow: hidden;
   text-align: center;
+}
+
+.artist-set {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.artist-set-pol {
+  top: 300px;
+  left: -148px;
+  width: 570px;
+  height: 782px;
+}
+
+.artist-set-david {
+  top: 214px;
+  right: -175px;
+  width: 500px;
+  height: 868px;
 }
 
 .artist {
@@ -521,16 +552,17 @@ a {
 }
 
 .artist-pol {
-  top: 248px;
-  left: -18px;
-  width: 505px;
-  transform: scaleX(-1);
+  top: 0;
+  left: 0;
+  width: 570px;
+  transform: scaleX(-1) scaleY(1.08);
+  transform-origin: center bottom;
 }
 
 .artist-david {
-  top: 209px;
-  right: -70px;
-  width: 445px;
+  top: 0;
+  right: 0;
+  width: 500px;
   transform: scaleX(-1);
 }
 
@@ -596,33 +628,33 @@ a {
 
 .belt {
   z-index: 2;
-  top: 1034px;
-  width: 420px;
-  height: 54px;
+  top: 1018px;
+  width: 470px;
+  height: 64px;
   object-fit: cover;
 }
 
 .belt-left {
-  left: 0;
+  left: -34px;
   object-position: left center;
 }
 
 .belt-right {
-  right: 0;
+  right: -34px;
   object-position: right center;
   transform: scaleX(-1);
 }
 
 .leaf-left {
-  top: 1220px;
+  top: 1112px;
   left: -170px;
-  width: 300px;
+  width: 250px;
 }
 
 .location-section {
   position: relative;
   z-index: 3;
-  min-height: 640px;
+  min-height: 520px;
   padding: 0 0 0;
   text-align: center;
 }
@@ -661,17 +693,13 @@ a {
 
 .final-section {
   position: relative;
-  min-height: 1280px;
+  min-height: 920px;
   padding-top: 40px;
   text-align: center;
 }
 
 .final-top {
-  z-index: 1;
-  top: -90px;
-  left: 50%;
-  width: 460px;
-  transform: translateX(-50%) scaleY(-1);
+  display: none;
 }
 
 .final-section h2 {
@@ -707,24 +735,24 @@ a {
 .final-beer {
   position: absolute;
   z-index: 2;
-  right: -50px;
-  bottom: -44px;
-  width: 1260px;
+  top: 320px;
+  right: -36px;
+  width: 980px;
   max-width: none;
 }
 
 .final-cactus {
   z-index: 3;
-  bottom: 62px;
-  left: -62px;
-  width: 355px;
+  top: 380px;
+  left: 18px;
+  width: 320px;
 }
 
 .final-leaf {
   z-index: 3;
-  top: 270px;
-  right: -112px;
-  width: 300px;
+  top: 285px;
+  right: -100px;
+  width: 270px;
   transform: scaleX(-1);
 }
 
@@ -786,14 +814,24 @@ a {
     height: 285px;
   }
 
+  .artist-set-pol {
+    top: 285px;
+    left: calc(50% - 1045px);
+    width: 610px;
+  }
+
+  .artist-set-david {
+    top: 214px;
+    right: calc(50% - 1045px);
+    width: 520px;
+  }
+
   .artist-pol {
-    left: calc(50% - 830px);
-    width: 560px;
+    width: 610px;
   }
 
   .artist-david {
-    right: calc(50% - 830px);
-    width: 500px;
+    width: 520px;
   }
 
   .artist-bio-david {
@@ -805,13 +843,13 @@ a {
   }
 
   .belt-left {
-    left: 0;
-    width: 520px;
+    left: -42px;
+    width: 560px;
   }
 
   .belt-right {
-    right: 0;
-    width: 520px;
+    right: -42px;
+    width: 560px;
   }
 
   .leaf-left {
@@ -823,15 +861,21 @@ a {
   }
 
   .final-beer {
-    right: calc(50% - 870px);
+    top: 320px;
+    right: calc(50% - 700px);
+    width: 1120px;
   }
 
   .final-cactus {
-    left: calc(50% - 810px);
+    top: 380px;
+    left: calc(50% - 700px);
+    width: 330px;
   }
 
   .final-leaf {
-    right: calc(50% - 890px);
+    top: 280px;
+    right: calc(50% - 810px);
+    width: 285px;
   }
 }
 
@@ -906,9 +950,15 @@ a {
   }
 
   .site-nav {
+    display: flex;
     min-height: 42px;
+    justify-content: center;
     gap: 15px;
     font-size: 15px;
+  }
+
+  .nav-links {
+    gap: 15px;
   }
 
   .nav-cta,
@@ -1079,11 +1129,16 @@ a {
   }
 
   .site-nav {
-    flex-wrap: wrap;
     row-gap: 2px;
     column-gap: 18px;
     padding-block: 6px;
     font-size: 14px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    row-gap: 2px;
+    column-gap: 18px;
   }
 
   .hero-section {
