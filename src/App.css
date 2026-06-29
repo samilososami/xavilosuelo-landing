@@ -198,7 +198,7 @@ a {
   position: relative;
   z-index: 3;
   width: max-content;
-  margin: 180px auto 0;
+  margin: 200px auto 0;
   transform: translateX(24px);
   font-family: var(--slab);
   line-height: 0.86;
@@ -232,7 +232,7 @@ a {
   z-index: 4;
   display: grid;
   width: 540px;
-  margin: 62px auto 0;
+  margin: 145px auto 0;
   justify-items: center;
   font-family: var(--slab);
   line-height: 1;
@@ -927,7 +927,7 @@ a {
 
   .brand-mark {
     width: 390px;
-    margin-top: 184px;
+    margin-top: 204px;
     transform: translateX(16px);
   }
 
@@ -941,7 +941,7 @@ a {
 
   .curved-slogan {
     width: 390px;
-    margin-top: 70px;
+    margin-top: 132px;
   }
 
   .curved-slogan span {
@@ -1097,7 +1097,7 @@ a {
 
   .brand-mark {
     width: 340px;
-    margin-top: 190px;
+    margin-top: 205px;
     letter-spacing: 1.4px;
     transform: translateX(0);
   }
@@ -1121,7 +1121,7 @@ a {
 
   .curved-slogan {
     width: 300px;
-    margin-top: 65px;
+    margin-top: 118px;
     transform: translateX(-8px) rotate(-4deg);
   }
 
