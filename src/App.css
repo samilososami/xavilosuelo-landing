@@ -754,8 +754,8 @@ a {
 .final-leaf {
   z-index: 3;
   top: 285px;
-  right: -100px;
-  width: 270px;
+  right: -135px;
+  width: 310px;
   transform: scaleX(-1);
 }
 
@@ -877,8 +877,8 @@ a {
 
   .final-leaf {
     top: 280px;
-    right: calc(50% - 810px);
-    width: 285px;
+    right: -24px;
+    width: 340px;
   }
 }
 
