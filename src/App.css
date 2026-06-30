@@ -1455,14 +1455,15 @@ a {
 
   .hero-sign {
     top: 10px;
-    width: 612px;
-    margin-left: -306px;
+    width: 552px;
+    margin-left: -276px;
   }
 
   .brand-mark {
     width: 330px;
-    margin-top: 205px;
+    margin-top: 190px;
     letter-spacing: 1px;
+    transform: translateX(0);
   }
 
   .brand-mark span:first-child {
@@ -1499,9 +1500,10 @@ a {
   }
 
   .decor-cactus-hero {
-    top: 392px;
-    left: -168px;
+    top: 432px;
+    left: -148px;
     width: 292px;
+    transform: rotate(-10deg);
   }
 
   .decor-barrel-hero {
