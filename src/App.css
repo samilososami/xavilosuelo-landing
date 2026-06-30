@@ -127,11 +127,9 @@ a {
 }
 
 .language-select {
-  display: flex;
+  position: relative;
+  display: block;
   height: 48px;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 13px;
   background: rgba(255, 250, 249, 0.88);
@@ -142,9 +140,60 @@ a {
   letter-spacing: 0;
 }
 
-.language-select img:first-child {
+.language-trigger {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 12px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.language-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.language-trigger img:first-child {
   width: 23px;
   height: 23px;
+}
+
+.language-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  display: grid;
+  min-width: 86px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 250, 249, 0.88);
+  backdrop-filter: blur(3.35px);
+  box-shadow: 0 10px 24px rgba(109, 49, 16, 0.12);
+}
+
+.language-menu button {
+  height: 32px;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: transparent;
+  color: var(--brown);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.language-menu button:last-child {
+  border-bottom: 0;
+}
+
+.language-menu button:hover,
+.language-menu button.is-active {
+  background: #fff;
+  color: var(--button-orange);
 }
 
 .arrow-icon {
@@ -646,10 +695,10 @@ a {
 }
 
 .leaf-left {
-  top: -242px;
+  top: -42px;
   left: -120px;
   width: 340px;
-  transform: rotate(-90deg);
+  transform: rotate(0deg);
   transform-origin: center center;
 }
 
