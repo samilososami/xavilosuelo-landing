@@ -1455,8 +1455,8 @@ a {
 
   .hero-sign {
     top: 80px;
-    width: 380px;
-    margin-left: -180px;
+    width: 360px;
+    margin-left: -170px;
   }
 
   .brand-mark {
@@ -1467,11 +1467,11 @@ a {
   }
 
   .brand-mark span:first-child {
-    font-size: 43px;
+    font-size: 40px;
   }
 
   .brand-mark span:last-child {
-    font-size: 38px;
+    font-size: 36px;
   }
 
   .curved-slogan {
