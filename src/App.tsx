@@ -705,6 +705,46 @@ function App() {
           <p className="section-copy">{t.stars.copy}</p>
         </div>
 
+        <div className="mobile-stars-layout">
+          <article className="mobile-artist-card mobile-artist-card-pol">
+            <div className="mobile-artist-portrait">
+              <img
+                className="mobile-artist-image mobile-artist-image-pol"
+                src={asset('context-screenshot-2-upscayl.png')}
+                alt="Pol F Ryan"
+              />
+              <img
+                className="mobile-belt mobile-belt-pol"
+                src={asset('context-gemini-generated-image-strip.png')}
+                alt=""
+              />
+            </div>
+            <div className="mobile-artist-text mobile-artist-text-pol">
+              <h3>Pol F Ryan</h3>
+              <p>{t.stars.polBio}</p>
+            </div>
+          </article>
+
+          <article className="mobile-artist-card mobile-artist-card-david">
+            <div className="mobile-artist-portrait">
+              <img
+                className="mobile-artist-image mobile-artist-image-david"
+                src={asset('context-el-gat-amb-botes-country-shop.png')}
+                alt="David Villellas"
+              />
+              <img
+                className="mobile-belt mobile-belt-david"
+                src={asset('context-gemini-generated-image-strip.png')}
+                alt=""
+              />
+            </div>
+            <div className="mobile-artist-text mobile-artist-text-david">
+              <h3>David Villellas</h3>
+              <p>{t.stars.davidBio}</p>
+            </div>
+          </article>
+        </div>
+
         <article className="artist-bio artist-bio-david">
           <h3>David Villellas</h3>
           <p>{t.stars.davidBio}</p>

@@ -675,6 +675,10 @@ a {
   text-align: left;
 }
 
+.mobile-stars-layout {
+  display: none;
+}
+
 .belt {
   z-index: 2;
   top: 1018px;
@@ -1384,5 +1388,413 @@ a {
   .final-leaf {
     right: -175px;
     width: 270px;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+
+  .page-shell {
+    max-width: none;
+  }
+
+  #inicio,
+  #evento,
+  #estrellas,
+  #ubicacion,
+  #apuntarme {
+    scroll-margin-top: 72px;
+  }
+
+  .site-header {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    grid-template-columns: 1fr;
+  }
+
+  .site-nav {
+    min-height: 42px;
+    padding: 7px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .nav-cta,
+  .language-select {
+    display: none;
+  }
+
+  .hero-section {
+    min-height: 724px;
+  }
+
+  .decor-branches-left,
+  .decor-branches-right {
+    top: -58px;
+    width: 250px;
+  }
+
+  .decor-branches-left {
+    left: -126px;
+  }
+
+  .decor-branches-right {
+    right: -126px;
+  }
+
+  .hero-sign {
+    top: 10px;
+    width: 612px;
+    margin-left: -306px;
+  }
+
+  .brand-mark {
+    width: 330px;
+    margin-top: 205px;
+    letter-spacing: 1px;
+  }
+
+  .brand-mark span:first-child {
+    font-size: 47px;
+  }
+
+  .brand-mark span:last-child {
+    font-size: 42px;
+  }
+
+  .curved-slogan {
+    width: 318px;
+    margin-top: 114px;
+    transform: rotate(-4deg);
+  }
+
+  .curved-slogan span {
+    font-size: 18px;
+  }
+
+  .curved-slogan strong {
+    font-size: 22px;
+  }
+
+  .hero-section h1,
+  .location-section h2 {
+    margin-top: 29px;
+    font-size: 27px;
+  }
+
+  .hero-copy {
+    width: min(322px, calc(100% - 42px));
+    font-size: 14px;
+  }
+
+  .decor-cactus-hero {
+    top: 392px;
+    left: -168px;
+    width: 292px;
+  }
+
+  .decor-barrel-hero {
+    top: 596px;
+    right: -88px;
+    width: 206px;
+  }
+
+  .photo-mosaic {
+    width: calc(100% - 28px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 12px auto 0;
+  }
+
+  .photo-mosaic .mosaic-wide-top {
+    grid-column: 1 / -1;
+    height: 206px;
+  }
+
+  .photo-mosaic .mosaic-wide-bottom,
+  .photo-mosaic .mosaic-mid-top {
+    height: 154px;
+  }
+
+  .photo-mosaic .mosaic-mid-bottom,
+  .photo-mosaic .mosaic-tall {
+    display: none;
+  }
+
+  .photo-mosaic img {
+    border-radius: 12px;
+  }
+
+  .signup-block {
+    min-height: auto;
+    padding: 36px 20px 58px;
+  }
+
+  .decor-car-left,
+  .decor-motor-right {
+    display: none;
+  }
+
+  .eyebrow,
+  .signup-copy {
+    line-height: 1.25;
+  }
+
+  .signup-copy,
+  .final-section > p {
+    width: min(320px, calc(100% - 34px));
+  }
+
+  .signup-form {
+    gap: 20px;
+  }
+
+  .signup-form input {
+    width: min(336px, calc(100vw - 40px));
+  }
+
+  .signup-form button {
+    width: min(248px, calc(100vw - 76px));
+    height: 54px;
+  }
+
+  .about-section {
+    padding: 48px 22px 0;
+  }
+
+  .about-section h2,
+  .stars-eyebrow {
+    font-size: 31px;
+  }
+
+  .section-copy {
+    width: min(336px, 100%);
+    margin: 24px auto 22px;
+    font-size: 15px;
+  }
+
+  .event-card-grid {
+    gap: 25px;
+    margin-top: 36px;
+  }
+
+  .event-card {
+    gap: 18px;
+  }
+
+  .event-card img {
+    height: 192px;
+    border-radius: 18px;
+  }
+
+  .event-card p {
+    width: min(260px, 100%);
+    min-height: 58px;
+    font-size: 17px;
+  }
+
+  .stars-section {
+    min-height: auto;
+    margin-top: 72px;
+    padding: 56px 18px 44px;
+    overflow: visible;
+  }
+
+  .stars-copy {
+    width: 100%;
+    max-width: none;
+  }
+
+  .stars-copy h2 {
+    margin-top: 24px;
+    font-size: 38px;
+  }
+
+  .stars-section > .artist-set,
+  .stars-section > .artist-bio,
+  .stars-section > .belt {
+    display: none;
+  }
+
+  .mobile-stars-layout {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    gap: 34px;
+    margin: 34px -18px 0;
+  }
+
+  .mobile-artist-card {
+    position: relative;
+    display: grid;
+    overflow: hidden;
+  }
+
+  .mobile-artist-portrait {
+    position: relative;
+    height: 430px;
+    overflow: hidden;
+  }
+
+  .mobile-artist-image,
+  .mobile-belt {
+    position: absolute;
+    display: block;
+    max-width: none;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .mobile-artist-image {
+    z-index: 1;
+    object-fit: contain;
+  }
+
+  .mobile-artist-image-pol {
+    top: 8px;
+    left: -150px;
+    width: 450px;
+    transform: scaleX(-1) scaleY(1.06);
+    transform-origin: center bottom;
+  }
+
+  .mobile-artist-image-david {
+    top: -8px;
+    right: -82px;
+    width: 368px;
+    transform: scaleX(-1);
+  }
+
+  .mobile-belt {
+    z-index: 2;
+    top: 382px;
+    width: 398px;
+    height: 54px;
+    object-fit: cover;
+  }
+
+  .mobile-belt-pol {
+    left: -88px;
+    object-position: left center;
+  }
+
+  .mobile-belt-david {
+    right: -88px;
+    object-position: right center;
+    transform: scaleX(-1);
+  }
+
+  .mobile-artist-text {
+    position: relative;
+    z-index: 3;
+    width: min(312px, calc(100% - 46px));
+    margin-top: 18px;
+    color: var(--bio);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.34;
+  }
+
+  .mobile-artist-text h3 {
+    margin: 0 0 16px;
+    color: var(--hot-orange);
+    font-family: var(--condensed);
+    font-size: 31px;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .mobile-artist-text p {
+    margin: 0;
+  }
+
+  .mobile-artist-text-pol {
+    margin-left: auto;
+    margin-right: 24px;
+    text-align: left;
+  }
+
+  .mobile-artist-text-david {
+    margin-right: auto;
+    margin-left: 24px;
+    text-align: right;
+  }
+
+  .leaf-left {
+    top: -62px;
+    left: -112px;
+    width: 230px;
+  }
+
+  .location-section {
+    min-height: auto;
+    padding: 48px 0 48px;
+  }
+
+  .location-section h2 {
+    margin-bottom: 24px;
+  }
+
+  .map-frame {
+    width: calc(100% - 34px);
+    max-width: none;
+    height: 226px;
+    border-width: 2px;
+    border-radius: 24px;
+  }
+
+  .decor-car-map {
+    top: 302px;
+    width: 220px;
+  }
+
+  .final-section {
+    min-height: 790px;
+    padding: 36px 20px 0;
+  }
+
+  .final-section h2 {
+    font-size: 30px;
+  }
+
+  .final-section > p {
+    margin: 18px auto 28px;
+    line-height: 1.35;
+  }
+
+  .signup-form-final input {
+    height: 64px;
+  }
+
+  .final-beer {
+    top: auto;
+    right: -260px;
+    bottom: -2px;
+    width: 860px;
+  }
+
+  .final-cactus {
+    top: auto;
+    bottom: 32px;
+    left: -80px;
+    width: 286px;
+  }
+
+  .final-leaf {
+    top: auto;
+    right: -172px;
+    bottom: 252px;
+    width: 266px;
   }
 }
