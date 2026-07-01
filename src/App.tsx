@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 
 const asset = (name: string) => `/figma-assets/${name}`
@@ -564,8 +565,10 @@ function SignupForm({
 }
 
 function App() {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
   const currentLanguage = getCurrentLanguage()
   const t = translations[currentLanguage]
+  const closeMobileMenu = () => setMobileMenuOpen(false)
 
   if (typeof document !== 'undefined') {
     document.documentElement.lang = currentLanguage
@@ -573,8 +576,11 @@ function App() {
 
   return (
     <main className="page-shell">
-      <header className="site-header">
+      <header className={`site-header${isMobileMenuOpen ? ' is-mobile-menu-open' : ''}`}>
         <nav className="site-nav" aria-label={t.nav.label}>
+          <a className="mobile-nav-brand" href="#inicio" onClick={closeMobileMenu}>
+            WE LIKE COUNTRY
+          </a>
           <div className="nav-links">
             <a href="#inicio">{t.nav.home}</a>
             <a href="#evento">{t.nav.about}</a>
@@ -585,6 +591,18 @@ function App() {
             <span>{t.nav.cta}</span>
             <ArrowIcon />
           </a>
+          <button
+            className="mobile-menu-toggle"
+            type="button"
+            aria-label="Menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
+            onClick={() => setMobileMenuOpen((isOpen) => !isOpen)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
         </nav>
         <details className="language-select" aria-label={t.nav.language}>
           <summary className="language-trigger">
@@ -605,6 +623,37 @@ function App() {
             ))}
           </div>
         </details>
+        <div className="mobile-menu-drawer" id="mobile-menu" aria-hidden={!isMobileMenuOpen}>
+          <a href="#inicio" onClick={closeMobileMenu}>
+            {t.nav.home}
+          </a>
+          <a href="#evento" onClick={closeMobileMenu}>
+            {t.nav.about}
+          </a>
+          <a href="#estrellas" onClick={closeMobileMenu}>
+            {t.nav.stars}
+          </a>
+          <a href="#ubicacion" onClick={closeMobileMenu}>
+            {t.nav.location}
+          </a>
+          <a className="mobile-menu-cta" href="#apuntarme" onClick={closeMobileMenu}>
+            <span>{t.nav.cta}</span>
+            <ArrowIcon />
+          </a>
+          <div className="mobile-menu-languages" aria-label={t.nav.language}>
+            {languageOptions.map((language) => (
+              <button
+                className={language.code === currentLanguage ? 'is-active' : undefined}
+                type="button"
+                aria-pressed={language.code === currentLanguage}
+                key={language.code}
+                onClick={() => selectDebugLanguage(language.code)}
+              >
+                {language.label}
+              </button>
+            ))}
+          </div>
+        </div>
       </header>
 
       <section id="inicio" className="hero-section">
@@ -619,6 +668,8 @@ function App() {
           alt=""
         />
         <img className="hero-sign" src={asset('context-chatgpt-image-31-ene-2026.png')} alt="" />
+        <img className="hero-sign-mobile" src={asset('tux-board.png')} alt="" />
+        <img className="hero-hat-mobile" src={asset('tux-hat.png')} alt="" />
         <div className="brand-mark" aria-label="We Like Country">
           <span>WE LIKE</span>
           <span>COUNTRY</span>
@@ -715,7 +766,7 @@ function App() {
               />
               <img
                 className="mobile-belt mobile-belt-pol"
-                src={asset('context-gemini-generated-image-strip.png')}
+                src={asset('tux-belt-1.png')}
                 alt=""
               />
             </div>
@@ -734,7 +785,7 @@ function App() {
               />
               <img
                 className="mobile-belt mobile-belt-david"
-                src={asset('context-gemini-generated-image-strip.png')}
+                src={asset('tux-belt-2.png')}
                 alt=""
               />
             </div>
